@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancovimax</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Estilo del encabezado */
+        header {
+            background-color: #0047AB;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+        }
+        
+        /* Estilo del menú principal */
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+        }
+        
+        .main-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main-menu li {
+            position: relative;
+            margin: 0 15px;
+        }
+        
+        .main-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .main-menu li a:hover {
+            background-color: #002244;
+        }
+        
+        /* Estilo de submenús */
+        .submenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: none;
+            min-width: 200px;
+            z-index: 100;
+        }
+        
+        .main-menu li:hover .submenu {
+            display: block;
+        }
+        
+        .submenu li {
+            margin: 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+        
+        .submenu li a {
+            color: #333;
+            padding: 12px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .submenu li a:hover {
+            background-color: #f5f5f5;
+            color: #0047AB;
+        }
+        
+        /* Estilo del contenido */
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Estilo de la sección de tasas */
+        .exchange-rates {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .exchange-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .exchange-table th, .exchange-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .exchange-table th {
+            background-color: #0047AB;
+            color: white;
+        }
+        
+        .exchange-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Bancovimax.png" alt="Imagen" width="200" height="200">
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul class="main-menu">
+                <li>
+                    <a href="#">Canales</a>
+                    <ul class="submenu">
+                        <li><a href="#">App Personas</a></li>
+                        <li><a href="#">App Empresas</a></li>
+                        <li><a href="#">Cajeros Automáticos</a></li>
+                        <li><a href="#">Centro de Contacto</a></li>
+                        <li><a href="#">Oficinas Comerciales</a></li>
+                        <li><a href="#">Subagente Bancovimax</a></li>
+                        <li><a href="#">TuBanco Personas</a></li>
+                        <li><a href="#">TuBanco Empresas</a></li>
+                        <li><a href="#">Asistente Virtual</a></li>
+                        <li><a href="#">Turnos y Citas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Sobre Nosotros</a>
+                    <ul class="submenu">
+                        <li><a href="#">Visión, Misión y Valores</a></li>
+                        <li><a href="#">Voluntariado</a></li>
+                        <li><a href="#">Centro Cultural</a></li>
+                        <li><a href="#">Responsabilidad Social</a></li>
+                        <li><a href="#">Memorias Anuales</a></li>
+                        <li><a href="#">Sé Parte de Nosotros</a></li>
+                        <li><a href="#">Noticias y Prensa</a></li>
+                        <li><a href="#">Consejo de Directores</a></li>
+                        <li><a href="#">Principales Ejecutivos</a></li>
+                        <li><a href="#">Despacho del Presidente Ejecutivo</a></li>
+                        <li><a href="#">Ley núm. 13-24 y Estatutos</a></li>
+                        <li><a href="#">Emisiones de Valores</a></li>
+                        <li><a href="#">Cuentas Inactivas</a></li>
+                        <li><a href="#">FATCA</a></li>
+                        <li><a href="#">Informes Financieros</a></li>
+                        <li><a href="#">Gobierno Corporativo</a></li>
+                        <li><a href="#">Contratos de Adhesión</a></li>
+                        <li><a href="#">Códigos de Ética</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Mapa</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ubicación de Oficinas</a></li>
+                        <li><a href="#">Cajeros Automáticos</a></li>
+                        <li><a href="#">Sucursales</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Calculadoras</a>
+                    <ul class="submenu">
+                        <li><a href="#">Calculadora de Préstamos</a></li>
+                        <li><a href="#">Calculadora de Ahorros</a></li>
+                        <li><a href="#">Calculadora de Inversión</a></li>
+                        <li><a href="#">Calculadora de Créditos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Acceder a TuBanco</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ingresar a TuBanco Personas</a></li>
+                        <li><a href="#">Ingresar a TuBanco Empresas</a></li>
+                        <li><a href="#">Recuperar Acceso</a></li>
+                        <li><a href="#">Registrarse</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Bienvenido a Bancovimax</h2>
+            <p>En Bancovimax, estamos comprometidos con ofrecer los mejores servicios financieros para nuestros clientes. Contamos con una amplia gama de productos y servicios diseñados para satisfacer todas sus necesidades.</p>
+            <p>Nuestro equipo de profesionales está siempre dispuesto a ayudarlo y brindarle el mejor servicio posible.</p>
+        </div>
+        
+        <div class="exchange-rates">
+            <h3>Tasas de Cambio Actualizadas</h3>
+            <table class="exchange-table">
+                <thead>
+                    <tr>
+                        <th>Moneda</th>
+                        <th>Compra</th>
+                        <th>Venta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>USD</td>
+                        <td>61.45</td>
+                        <td>62.95</td>
+                    </tr>
+                    <tr>
+                        <td>EUR</td>
+                        <td>66.50</td>
+                        <td>72.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
